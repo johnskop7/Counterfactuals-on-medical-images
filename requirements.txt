@@ -1,0 +1,11 @@
+pytorch_lightning
+pydicom
+opensimplex
+click
+requests
+tqdm
+pyspng
+ninja
+imageio-ffmpeg
+piq
+openai-clip
