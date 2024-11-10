@@ -12,3 +12,9 @@ Currently we have applied our framework on three different datasets :
 * Retinal OCT Images (optical coherence tomography) with four different classes (choroidal neovascularization (CNV),Diabetic macular edema (DME),Multiple drusen (arrowheads) present in early AMD and Normal retina)
 * Lung Opacity dataset from the RSNA pneumonia detection challenge with two classes (Lung Opacity and Normal)
 * Brain MRI dataset which initially had four classes (Mild ,Moderate, Very Moderate and No dementia ) but we then reduced them to two (Dementia and No Dementia)
+
+
+The first two datasets are available in kaggle. If you want to use them in google colab through the kaggle API you can run the following commands :
+!kaggle competitions download -c rsna-pneumonia-detection-challenge
+#!kaggle datasets download -d tobiassilalahi/oct-images-normalize-zip
+!unzip \*.zip && rm *.zip
