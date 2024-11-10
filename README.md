@@ -21,4 +21,9 @@ The first two datasets are available in kaggle. If you want to use them in googl
 
 The Brain MRI images are available [here](https://drive.google.com/drive/folders/1-4DDyMcHBT_NGrNEZcw8Bb7eovnvilDT?usp=drive_link) 
 
-You can also find [here](https://drive.google.com/drive/folders/1VW6pL0TVRiZyDBFlYknk1dhtFgJdaOzQ?usp=drive_link) a folder that contains the weights of the pretrained models along with other information needed for running the experiments . You can read the README files of each folder to find out about training details, class indexes etc.
+You can also find [here](https://drive.google.com/drive/folders/1VW6pL0TVRiZyDBFlYknk1dhtFgJdaOzQ?usp=drive_link) a folder that contains the weights of the pretrained models along with other information needed for running the experiments . You can check the README files of each folder to find out about training details, class indexes etc. Here is how you can use the scripts to run the experiments:
+
+1. Pick an image from one of the above dataset and save it in .png format. If you are using google colab you can do that by running the script main.py as follows:
+```%run main.py --num_classes 2 --selected_image 49 --dataset_name chest_xray --image_size 256 --data_dir "path/to/dataset" --model_type resnet50 --model_weights=path/to/model/weights.pth  --original_class 1 --output_path "path/to/output_image.png"```
+With this script you are also indicating the dimensions of the image(for lung opacity dataset we have ran expeeriments for both 128 and 256 dimensions, for brain mri only for 128 and for oct images only for 256), the original class that you want your image to belong (check the documentation to find out which index corresponds to each class) , the number of classes of each dataset (it is required) , the model type (resnet50,resnet18 or alexnet, although the results are mostly for resnet50 CNN models) along with the respective weigths . The selected_image argument is just an index to a list of saved images. 
+
