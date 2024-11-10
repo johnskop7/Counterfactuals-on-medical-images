@@ -15,6 +15,6 @@ Currently we have applied our framework on three different datasets :
 
 
 The first two datasets are available in kaggle. If you want to use them in google colab through the kaggle API you can run the following commands :
-!kaggle competitions download -c rsna-pneumonia-detection-challenge
-#!kaggle datasets download -d tobiassilalahi/oct-images-normalize-zip
-!unzip \*.zip && rm *.zip
+`!kaggle competitions download -c rsna-pneumonia-detection-challenge`
+`!kaggle datasets download -d tobiassilalahi/oct-images-normalize-zip`
+`!unzip \*.zip && rm *.zip`
