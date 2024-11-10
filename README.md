@@ -15,6 +15,10 @@ Currently we have applied our framework on three different datasets :
 
 
 The first two datasets are available in kaggle. If you want to use them in google colab through the kaggle API you can run the following commands :
-`!kaggle competitions download -c rsna-pneumonia-detection-challenge`
-`!kaggle datasets download -d tobiassilalahi/oct-images-normalize-zip`
-`!unzip \*.zip && rm *.zip`
+```!kaggle competitions download -c rsna-pneumonia-detection-challenge```
+```!kaggle datasets download -d tobiassilalahi/oct-images-normalize-zip```
+```!unzip \*.zip && rm *.zip```
+
+The Brain MRI images are available [here](https://drive.google.com/drive/folders/1-4DDyMcHBT_NGrNEZcw8Bb7eovnvilDT?usp=drive_link) 
+
+You can also find [here](https://drive.google.com/drive/folders/1VW6pL0TVRiZyDBFlYknk1dhtFgJdaOzQ?usp=drive_link) a folder that contains the weights of the pretrained models along with other information needed for running the experiments . You can read the README files of each folder to find out about training details, class indexes etc.
