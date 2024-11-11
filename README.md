@@ -21,7 +21,7 @@ The first two datasets are available in kaggle. If you want to use them in googl
 
 The Brain MRI images are available [here](https://drive.google.com/drive/folders/1-4DDyMcHBT_NGrNEZcw8Bb7eovnvilDT?usp=drive_link) 
 
-You can also find [here](https://drive.google.com/drive/folders/1VW6pL0TVRiZyDBFlYknk1dhtFgJdaOzQ?usp=drive_link) a folder that contains the weights of the pretrained models along with other information needed for running the experiments . You can check the README files of each folder to find out about training details, class indexes etc. Here is how you can use the scripts to run the experiments:
+You can also find [here](https://drive.google.com/drive/folders/1VW6pL0TVRiZyDBFlYknk1dhtFgJdaOzQ?usp=drive_link) a folder that contains the weights of the pretrained models along with other information like class activations, csv files, etc. needed for running the experiments . You can check the README files of each folder to find out about training details, class indexes etc. Here is how you can use the scripts to run the experiments:
 
 1. Pick an image from one of the above datasets and save it in .png format. If you are using google colab you can do that by running the script main.py as follows:
 ```%run pick_an_image.py --num_classes 2 --selected_image 49 --dataset_name chest_xray --image_size 256 --data_dir "path/to/dataset" --model_type resnet50 --model_weights=path/to/model/weights.pth  --original_class 1 --output_path "path/to/output_image.png"```
@@ -35,4 +35,8 @@ With this script you are also indicating the dimensions of the image(for lung op
 
 5. Finally you can apply the method of the connected components by running the script connected_comp.py .
 ```%run connected_comp.py --info_path "/content/info.npz" --method 2 --n 2 --l 21 --pixel_threshold 10 --model_type resnet50 --model_weights=$cnn_weights ``` . You should indicate the path where the info from step 4 were saved along with some other important arguments the meaning of which you can find in the script. 
+
+
+If you want to use the Lung Opacity dataset you should also change in transforms.py script the path where the train,test and validation .csv files were saved. 
+You can check the testing.ipynb notebook for further help.
 
